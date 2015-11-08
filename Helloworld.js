@@ -22,7 +22,7 @@ url = require('url');
 					console.log('json', result);
 					response.end(result);
 				};
-				getSQL(callback, 'SELECT * FROM user_location WHERE user_id = ' + queryObject.userid);
+				getSQL(callback, 'SELECT * FROM user_location');
 				break;
 			case '/savelocation':
 				console.log('Receiving request...');
@@ -76,10 +76,10 @@ url = require('url');
 		function getSQL(callback, query) {
 			var mysql = require('mysql');
 			var connection = mysql.createConnection ({
-				host:'localhost',
-				user:'root',
-				password: 'Albus_Severus_Potter11',
-				database : 'tracker',
+				host:'ec2-54-225-199-108.compute-1.amazonaws.com:5432',
+				user:'dcoafuayimenim',
+				password: 'nEdkKRAl2jbP4ldwejt7v0OHds',
+				database : 'daad1ukmfam4uc',
 			});
 			connection.connect();
 			var json = '';
