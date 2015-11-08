@@ -22,7 +22,6 @@
 
 var map;
 function setMarker() {
-	alert recLocation();
 	var marker = new google.maps.Marker({
 	position: recLocation(),
 	map: map,
@@ -51,7 +50,7 @@ function initMap(coords) {
 		zoom: 20
 	});
 	
-	setMarker();
+	// setMarker();
 	window.setInterval(loop, 3000);
 }
 
@@ -64,13 +63,13 @@ function loop() {
 
 	// get locations from server
 	$.get(
-		"https://nameless-retreat-4373.herokuapp.com/getlocations?userid=userid",
+		"https://nameless-retreat-4373.herokuapp.com/getlocations",
 		updateMap
 	);
 }
 
-function updateMap() {
-	
+function updateMap(results) {
+	console.log(results)
 };
 
 
