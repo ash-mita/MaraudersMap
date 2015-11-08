@@ -105,7 +105,7 @@
 		<script type="text/javascript">
 			
 			function redir() {
-				window.location = "../Map.html?username=" + document.getElementById("tb");
+				location = String(location).substring(0, -9) + 'map';
 			}
 		</script>
 	</head>
