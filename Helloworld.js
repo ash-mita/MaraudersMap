@@ -53,7 +53,7 @@ url = require('url');
 		}
 
 		function show_login(response) {
-			fs.readFile('SamplePage.html', function (err, html) {
+			fs.readFile('Login.html', function (err, html) {
 				if (err) {
 				throw err;
 				}
@@ -64,7 +64,7 @@ url = require('url');
 		}
 		
 		function show_map(response) {
-			fs.readFile('SamplePage1.html', function (err, html) {
+			fs.readFile('Map.html', function (err, html) {
 				if (err) {
 				throw err;
 				}
@@ -95,5 +95,5 @@ url = require('url');
 				callback(null, json);
 			});
 		}
-	}).listen(8081);
+	}).listen(process.env.PORT || 8080);
 console.log("Server running at http://127.0.0.1:8081/");
