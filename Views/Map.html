@@ -21,6 +21,12 @@
     <script>
 
 var map;
+var marker = new google.maps.Marker({
+	position: new google.maps.LatLng(getLocation()),
+	map: map,
+	title: 'getUserId()',
+	icon: 'https://ash-mita.github.io/MaraudersMap/Views/Images/leftFoot.png'
+});
 
 function getUserId() {
 	$.get(
