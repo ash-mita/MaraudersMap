@@ -53,7 +53,7 @@ url = require('url');
 		}
 
 		function show_login(response) {
-			fs.readFile('Login.html', function (err, html) {
+			fs.readFile('Views/Login.html', function (err, html) {
 				if (err) {
 				throw err;
 				}
@@ -64,7 +64,7 @@ url = require('url');
 		}
 		
 		function show_map(response) {
-			fs.readFile('Map.html', function (err, html) {
+			fs.readFile('Views/Map.html', function (err, html) {
 				if (err) {
 				throw err;
 				}
