@@ -76,10 +76,10 @@ url = require('url');
 		function getSQL(callback, query) {
 			var mysql = require('mysql');
 			var connection = mysql.createConnection ({
-				host:'ec2-54-225-199-108.compute-1.amazonaws.com:5432',
-				user:'dcoafuayimenim',
-				password: 'nEdkKRAl2jbP4ldwejt7v0OHds',
-				database : 'daad1ukmfam4uc',
+				host:'localhost',
+				user:'root',
+				password: 'Albus_Severus_Potter11',
+				database : 'tracker',
 			});
 			connection.connect();
 			var json = '';
@@ -87,7 +87,7 @@ url = require('url');
 				if (err)
 					return callback(err, null);
 				
-				console.log('The query-result is :', results[0]);
+				console.log('The query-result is :', results);
 				
 				json = JSON.stringify(results);
 				connection.end();
@@ -96,4 +96,4 @@ url = require('url');
 			});
 		}
 	}).listen(process.env.PORT || 8080);
-console.log("Server running at http://127.0.0.1:8081/");
+console.log("Server running at http://127.0.0.1:8080/");
