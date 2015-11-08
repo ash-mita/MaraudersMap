@@ -1,0 +1,8 @@
+{
+	"name": "heroku-node",
+	"description": "OUr sample Node to Heroku app",
+	main":"Helloworld.js",
+	"scripts": {
+		"start": "node Helloworld.js"
+	}"
+}
