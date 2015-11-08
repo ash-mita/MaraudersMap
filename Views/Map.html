@@ -31,7 +31,7 @@ function setMarker() {
 
 function getUserId() {
 	$.get(
-		"https://nameless-retreat-4373.herokuapp.com/getid?username="+arman
+		"../getid?username="+arman
 	);
 }
 	
@@ -57,13 +57,13 @@ function initMap(coords) {
 function loop() {
 	// send location to server
 	$.get(
-	"https://nameless-retreat-4373.herokuapp.com/savelocation?lat=" + 123 + "&lon=" + 456 + "&id=1",
+	"../savelocation?lat=" + 123 + "&lon=" + 456 + "&id=1",
 	function(data){	}
 	);
 
 	// get locations from server
 	$.get(
-		"https://nameless-retreat-4373.herokuapp.com/getlocations",
+		"../getlocations",
 		updateMap
 	);
 }
