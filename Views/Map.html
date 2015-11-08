@@ -60,7 +60,7 @@ function loop() {
 
 function updateMap(results) {
 	for (footprint in results) {
-    setMarker({lat: footprint.latitude, lng: footprint.longitude}, footprint.id);
+    setMarker({lat: parseInt(footprint.latitude), lng: parseInt(footprint.longitude)}, footprint.id);
   }
 };
 
