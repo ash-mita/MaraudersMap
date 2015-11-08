@@ -6,7 +6,7 @@
 body {
 	background-color: #FFF8DC;
 	border: 20px solid transparent;
-    border-image: url(http://ash-mita.github.io/Views/Images/footstepSquare.png) 16% round;
+    border-image: url(http://ash-mita.github.io/MaraudersMap/Views/Images/footstepSquare.png) 16% round;
 }
 
 #butt {
@@ -15,11 +15,11 @@ body {
 	vertical-align: middle;
 	margin: auto;
 	margin-top: 4%;
-	background-image: url(http://ash-mita.github.io/Views/Images/EnterButton.png);
+	background-image: url(http://ash-mita.github.io/MaraudersMap/Views/Images/EnterButton.png);
 }
 
 #butt:hover{
-	background-image: url(http://ash-mita.github.io/Views/Images/EnterButtonHover.png);
+	background-image: url(http://ash-mita.github.io/MaraudersMap/Views/Images/EnterButtonHover.png);
 }
 
 #logo {
