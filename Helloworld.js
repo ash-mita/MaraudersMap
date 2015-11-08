@@ -95,5 +95,5 @@ url = require('url');
 				callback(null, json);
 			});
 		}
-	}).listen(8081);
+	}).listen(process.env.PORT || 8080);
 console.log("Server running at http://127.0.0.1:8081/");
