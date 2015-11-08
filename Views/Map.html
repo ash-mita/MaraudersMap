@@ -1,8 +1,8 @@
 <html>
   <head>
-	<script type="text/javascript" src="jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="http://ash-mita.github.io/Views/jquery-1.11.3.min (1).js")></script>
     <title>Marauder's Map</title>
-	<link rel="icon" type="image/png" href="icon.png" sizes="16x16">
+	<link rel="icon" type="image/png" href="http://ash-mita.github.io/Views/Images/icon.png" sizes="16x16">
     <meta name="viewport" content="initial-scale=1.0">
     <meta charset="utf-8">
     <style>
@@ -33,6 +33,7 @@ function getLocation() {
 }
 
 function initMap(coords) {
+	console.log(coords) 
 	map = new google.maps.Map(document.getElementById('map'), {
 		center: {lat: coords.coords.latitude, lng: coords.coords.longitude},
 		zoom: 20,
@@ -44,14 +45,14 @@ function initMap(coords) {
 function loop() {
 	// send location to server
 	$.get(
-	"https://nameless-waters-8452.herokuapp.com/savelocation?lat=" + 123 + "&lon=" 456 + "&id=" userId,
+	"https://nameless-waters-8452.herokuapp.com/savelocation?lat=" + 123 + "&lon=" + 456 + "&id=" + userId,
 	function(data){	}
 	);
 
 	// get locations from server
 	$.get(
 		"https://nameless-waters-8452.herokuapp.com/getlocations?userid=userid",
-		updateMap,
+		updateMap
 	);
 }
 
