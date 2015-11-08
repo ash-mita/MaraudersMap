@@ -21,6 +21,7 @@
     <script>
 
 var map;
+var coords;
 function setMarker(loc, userId) {
 	var marker = new google.maps.Marker({
 	position: loc,
@@ -33,10 +34,10 @@ function getLocation() {
 	navigator.geolocation.getCurrentPosition(initMap);
 }
 
-function initMap(coords) {
-	console.log(coords) 
+function initMap(position) {
+	coords = position.coords;
 	map = new google.maps.Map(document.getElementById('map'), {
-		center: {lat: coords.coords.latitude, lng: coords.coords.longitude},
+		center: {lat: coords.latitude, lng: coords.longitude},
 		zoom: 20
 	});
 	
@@ -47,7 +48,7 @@ function initMap(coords) {
 function loop() {
 	// send location to server
 	$.get(
-	"../savelocation?lat=" + 123 + "&lon=" + 456 + "&id=1",
+	"../savelocation?lat=" + coords.latitude + "&lon=" + coords.longitude + "&id=1",
 	function(data){	}
 	);
 
