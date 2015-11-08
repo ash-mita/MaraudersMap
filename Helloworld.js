@@ -22,7 +22,7 @@ url = require('url');
 					console.log('json', result);
 					response.end(result);
 				};
-				getSQL(callback, 'SELECT * FROM user_location WHERE user_id = ' + queryObject.userid);
+				getSQL(callback, 'SELECT * FROM user_location');
 				break;
 			case '/savelocation':
 				console.log('Receiving request...');
@@ -87,7 +87,7 @@ url = require('url');
 				if (err)
 					return callback(err, null);
 				
-				console.log('The query-result is :', results[0]);
+				console.log('The query-result is :', results);
 				
 				json = JSON.stringify(results);
 				connection.end();
@@ -96,4 +96,4 @@ url = require('url');
 			});
 		}
 	}).listen(process.env.PORT || 8080);
-console.log("Server running at http://127.0.0.1:8081/");
+console.log("Server running at http://127.0.0.1:8080/");
