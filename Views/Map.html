@@ -22,6 +22,7 @@
 
 var map;
 function setMarker() {
+	alert recLocation();
 	var marker = new google.maps.Marker({
 	position: recLocation(),
 	map: map,
@@ -31,7 +32,7 @@ function setMarker() {
 
 function getUserId() {
 	$.get(
-		"https://nameless-retreat-4373.herokuapp.com/getid?username=mariel"
+		"https://nameless-retreat-4373.herokuapp.com/getid?username="+arman
 	);
 }
 	
@@ -57,7 +58,7 @@ function initMap(coords) {
 function loop() {
 	// send location to server
 	$.get(
-	"https://nameless-retreat-4373.herokuapp.com/savelocation?lat=" + 123 + "&lon=" + 456 + "&id=" + userId,
+	"https://nameless-retreat-4373.herokuapp.com/savelocation?lat=" + 123 + "&lon=" + 456 + "&id=1",
 	function(data){	}
 	);
 
