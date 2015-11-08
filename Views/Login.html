@@ -1,8 +1,37 @@
 <html>
 	<head>
-		<title> First Website on Server </title>
+				 
+		<title>Marauder's Map</title>
+		<link rel="icon" type="image/png" href="icon.png" sizes="16x16">
+		<link rel="stylesheet" type="text/css" href="login.css">
+		
+		<script type="text/javascript" src="jquery-1.11.3.min.js"></script>
+		<script type="text/javascript">
+			alert("hello");
+			document.getElementById("butt").addEventListener('click', 'redir');
+			
+			function redir() {
+				location = location.substring(0, -9) + 'main.htm';
+			}
+		</script>
 	</head>
+	
 	<body>
-		<h3><a href="SamplePage1.html">Hello World</a><h3>
+	
+	<!-- Logo -->
+	<div id="logo">
+		<img id="logo1" src="M-Map.png" alt="logo">
+	</div>
+	
+	<!-- Username -->
+	<div id="basic">					
+		<input id="tb" type="text" placeholder = "Enter Username"></input>
+		
+	<button onclick="redir" id="butt" title="I solemnly swear that I am up to no good">
+	</button>
+	
+	</div>
+		
+
 	</body> 
 </html>
